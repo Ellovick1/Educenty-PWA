@@ -1,9 +1,11 @@
+import { ThemeSwitch } from "@/components/theme-switch"
 import InstituteLogo from "@/public/assets/institute-logo.png"
 import Image from "next/image"
 
 
 function AuthHeader() {
   return (
+    <>
   <div className="flex gap-4 p-6">
   <div>
       <Image src={InstituteLogo} alt="" />
@@ -14,7 +16,9 @@ function AuthHeader() {
       <p>Okota</p>
   </div>
 
+    <ThemeSwitch />
 </div>
+    </>
   )
 }
 
