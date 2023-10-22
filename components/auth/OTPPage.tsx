@@ -72,7 +72,7 @@ const OtpPage: React.FC = () => {
   const handleLogin = () => {
     // Perform login logic here
     // Once login is successful, navigate to the dashboard
-    router.push('/dashboard');
+    router.push('/defaultEnv');
   };
 
   const handleSubmit = () => {

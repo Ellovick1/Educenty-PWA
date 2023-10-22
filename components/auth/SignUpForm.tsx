@@ -36,11 +36,11 @@ interface StepProps {
 function StepOne({ onPrev, onNext }: StepProps) {
     return (
         <div>
-            <Card className="border-none">
-                <CardHeader className="mb-3 mx-6 flex justify-center items-center text-sm border rounded-2xl">
+            <Card className="border-none shadow-none bg-transparent">
+                <div className="mb-3 mx-6 flex justify-center items-center border rounded-2xl ">
                     <Image src={GoogleImg} alt='google img' className=' w-10' />
                     Sign up with Google
-                </CardHeader>
+                </div>
                 <CardBody className="grid gap-4">
 
                     <div className="grid gap-2">
@@ -54,19 +54,16 @@ function StepOne({ onPrev, onNext }: StepProps) {
                         <div className='flex gap-2'>
                             <Dropdown>
                                 <DropdownTrigger>
-                                    <Button
+                                    <Button className='w-[20px] min-w-unit-10'
                                         variant="bordered"
                                     >
-                                        Open Menu
+                                        NGN
                                     </Button>
                                 </DropdownTrigger>
                                 <DropdownMenu aria-label="Static Actions">
-                                    <DropdownItem key="new">New file</DropdownItem>
-                                    <DropdownItem key="copy">Copy link</DropdownItem>
-                                    <DropdownItem key="edit">Edit file</DropdownItem>
-                                    <DropdownItem key="delete" className="text-danger" color="danger">
-                                        Delete file
-                                    </DropdownItem>
+                                    <DropdownItem key="new">GHA</DropdownItem>
+                                    <DropdownItem key="copy">ARG</DropdownItem>
+                                    <DropdownItem key="edit">IVR</DropdownItem>                        
                                 </DropdownMenu>
                             </Dropdown>
 
@@ -93,11 +90,11 @@ function StepOne({ onPrev, onNext }: StepProps) {
 function StepTwo({ onPrev, onNext }: StepProps) {
     return (
         <div>
-            <Card className="border-none">
-                <CardHeader className="mb-3 mx-6 flex justify-center items-center text-sm border rounded-2xl">
+            <Card className="border-none shadow-none bg-transparent">
+                <div className="mb-3 mx-6 flex justify-center items-center text-sm border rounded-2xl">
                     <Image src={GoogleImg} alt='google img' className=' w-10' />
                     Sign up with Google
-                </CardHeader>
+                </div>
                 <CardBody className="grid gap-4">
 
                     <div className="grid gap-2">
@@ -142,7 +139,7 @@ function SignupForm() {
     const handleLogin = () => {
         // Perform login logic here
         // Once login is successful, navigate to the dashboard
-        router.push('/dashboard');
+        router.push('/defaultEnv');
     };
 
     const [currentStep, setCurrentStep] = useState(1);

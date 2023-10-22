@@ -28,17 +28,17 @@ export default function SignInForm() {
   const handleLogin = () => {
     // Perform login logic here
     // Once login is successful, navigate to the dashboard
-    router.push('/dashboard');
+    router.push('/defaultEnv');
   };
 
   return (
     <AuthLayout>
-        <Card className="border-none">
+        <Card className="border-none shadow-none bg-transparent">
           <CardBody className="grid gap-4">
             <CardHeader className="text-xl text-left">
               Sign in
             </CardHeader>
-            <div className="grid gap-2">
+            <div className="grid gap-x-2">
               <Input id="email" type="email" placeholder="User name, email, or phone number" />
             </div>
             <div className="grid gap-2">
@@ -48,7 +48,7 @@ export default function SignInForm() {
             <div className="flex items-center justify-between space-x-2">
               <Button className="w-1/3" onClick={handleLogin}>Signup</Button>
               <div>
-                <Checkbox id="terms" />
+                <Checkbox id="terms" className=" rounded-none"/>
                 <label
                   htmlFor="terms"
                   className="pl-2 text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -61,10 +61,10 @@ export default function SignInForm() {
 
           <CardFooter className="flex flex-col items-start">
 
-            <p className="mt-2 text-xs text-left text-gray-700">
+            <p className="mt-2 text-xs pl-3">
               {" "}
               Trouble Signing in?{" "}
-              <span className=" text-blue-600 hover:underline">
+              <span className=" hover:underline">
                 {/* Sign up */}
               </span>
             </p>
